@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kubernetes-sidecar-injector-deployment
-  labels:
-    app: kubernetes-sidecar-injector
+  selector:
+    matchLabels:
+      app: kubernetes-sidecar-injector
 spec:
   replicas: 1
   template:
