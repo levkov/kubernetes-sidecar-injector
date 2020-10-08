@@ -3,10 +3,10 @@ kind: Deployment
 metadata:
   name: kubernetes-sidecar-injector-deployment
 spec:
+  revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: kubernetes-sidecar-injector
-spec:
   replicas: 1
   template:
     metadata:
